@@ -1,0 +1,79 @@
+@import 'fonts.css';
+
+
+
+
+/* 
+
+! Variables
+
+*/
+
+:root{
+   --bg-gray-top: #d1d1d1;
+   --bg-gray-bottom: #efefef;
+   --main-bg: #f7f7f7;
+   --bg-clouds-top: #eb864c;
+   --bg--clouds-bottom: #ab5e36;
+   --bg-humidity-top: #a65f7f;
+   --bg-humidity-bottom: #7e4861;
+   --bg-pressure-top: #435173;
+   --bg-pressure-bottom: #2d3a51;
+}
+
+
+
+/* 
+
+! Reset
+
+*/
+
+html{
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+*,
+::after,
+::before{
+    box-sizing: inherit;
+    font-size: inherit;
+    margin: 0;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+input{
+    outline: none;
+}
+
+
+
+
+body{
+    font-family: "Roboto", serif;
+    font-size: 1rem;
+    background-image: linear-gradient(var(--bg-gray-top),var(--bg-gray-bottom));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+
+/* 
+
+* App Css
+
+*/
+
+/* ? MAin */
+
+
+
+

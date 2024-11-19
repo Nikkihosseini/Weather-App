@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/app.css">
+    <link rel="stylesheet" href="./styles/all.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/responsive.css">
+    <title>Weather</title>
+</head>
+<body>
+     
+    <main class="main">
+
+        <div class="weatherApp__wrapper">
+           <form action="">
+            <input id="weatherApp__search" type="text" name="weatherApp__search">
+            <button class="weatherApp__search-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+           </form>
+
+           <div class="weatherApp__details">
+                <div class="weatherApp__location--wrapper">
+                    <h1 class="weatherApp__location">Washington</h1>
+                    <img class="weatherApp__flag" src="https://flagsapi.com/US/shiny/64.png">
+                </div>
+
+                <img src="http://openweathermap.org/img/wn/10d@4x.png" alt="weather">
+
+                <div class="weatherApp__temperature--wrapper">
+                     <h2 class="weatherApp__temperature">1.38</h2>
+                     <span>o</span>
+                     <p class="weatherApp__description">overcast clouds</p>
+                </div>
+           </div>
+
+           <div class="weatherApp__more-details__name">
+            <div class="weatherApp__clouds">
+                <h3 class="more-details__name">Clouds</h3>
+                <i class="fa-solid fa-cloud"></i>
+                <span class="more-details">100%</span>
+            </div>
+            <div class="weatherApp__humidity">
+                <h3 class="more-details__name">Humidity</h3>
+                <i class="fa-solid fa-droplet"></i>
+                <span class="more-details">84</span>
+            </div>
+            <div class="weatherApp__pressure">
+                <h3 class="more-details__name">Pressure</h3>
+                <i class="fa-solid fa-gauge"></i>
+                <span class="more-details">1012Pa</span>
+            </div>
+           </div>
+
+        </div>
+
+        <div class="copyright__weapper">
+            <p class="copyright">
+                Copyright ©
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>
+                <a class="github__link" href="https://github.com/nikkihosseini" target="_blank">
+                   <span>NikkiHosseini</span>
+                    <svg class="github__svg">
+                        <use href="#github"></use>
+                    </svg>
+                </a>
+            </p>
+           </div>
+    </main>
+   
+    <script src="./script/app.js"></script>
+</body>
+</html>
