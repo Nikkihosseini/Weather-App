@@ -139,7 +139,10 @@ body{
 }
 .weatherApp__img{
     filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.4));
-
+    display: block;
+    margin: auto;
+    width: 20rem;
+    height: 20rem;
 }
 .weatherApp__temperature--wrapper{
 
