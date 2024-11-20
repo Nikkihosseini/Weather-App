@@ -14,10 +14,10 @@
     <main class="main">
 
         <div class="weatherApp__wrapper">
-           <form action="">
+           <form class="form" action="">
             <input id="weatherApp__search" type="text" name="weatherApp__search">
             <button class="weatherApp__search-btn">
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-magnifying-glass fa-lg"></i>
             </button>
            </form>
 
@@ -27,7 +27,7 @@
                     <img class="weatherApp__flag" src="https://flagsapi.com/US/shiny/64.png">
                 </div>
 
-                <img src="http://openweathermap.org/img/wn/10d@4x.png" alt="weather">
+                <img class="weatherApp__img" src="http://openweathermap.org/img/wn/10d@4x.png" alt="weather">
 
                 <div class="weatherApp__temperature--wrapper">
                      <h2 class="weatherApp__temperature">1.38</h2>
@@ -56,21 +56,20 @@
 
         </div>
 
-        <div class="copyright__weapper">
-            <p class="copyright">
-                Copyright ©
-                <script>
-                    document.write(new Date().getFullYear())
-                </script>
-                <a class="github__link" href="https://github.com/nikkihosseini" target="_blank">
-                   <span>NikkiHosseini</span>
-                    <svg class="github__svg">
-                        <use href="#github"></use>
-                    </svg>
-                </a>
-            </p>
-           </div>
+      
     </main>
+    <div class="copyright__weapper">
+        <p class="copyright">
+            Copyright ©
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            <a class="github__link" href="https://github.com/nikkihosseini" target="_blank">
+               <span>NikkiHosseini</span>
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </p>
+       </div>
    
     <script src="./script/app.js"></script>
 </body>
