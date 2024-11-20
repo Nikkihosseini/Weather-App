@@ -14,7 +14,6 @@ const pressure = $.querySelector('.pressure')
 
 form.addEventListener('submit', (event) => {
     event.preventDefault()
-
     if(searchValue.value !== ''){
         searchValue()
     }
@@ -29,8 +28,43 @@ function searchValue(){
       .then(response => response.json())
       .then(data => {
         console.log(data)
+        if(data.cod == 200){
+            let cityName = $.querySelector('.weatherApp__location')
+            cityName.innerHTML = data.name
+        
+            let flagCountry = $.querySelector('.weatherApp__flag')
+            flagCountry.src = `https://flagsapi.com/${data.sys.country}/shiny/64.png`
+        
+            let weatherAppImg = $.querySelector('.weatherApp__img')
+            weatherAppImg.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`
+        
+            let temperature = $.querySelector('.weatherApp__temperature')
+            temperature.innerHTML = data.main.temp
+        
+            let description = $.querySelector('.weatherApp__description')
+            description.innerHTML = data.weather[0].description
+        
+            let clouds = $.querySelector('.clouds')
+            clouds.innerHTML = `${data.clouds.all}%`
+        
+            let humidity = $.querySelector('.humidity')
+            humidity.innerHTML = `${data.main.humidity}%`
+        
+            let pressure = $.querySelector('.pressure')
+            pressure.innerHTML = `${data.main.pressure}hPa`
+        }else{
+            main.classList.add('error')
+            setTimeout(() => {
+                main.classList.remove('error')
+            }, 2000);
+        }
         searchValueInput.value = '';
       })
 }
 
+function inItApp(){
+    searchValueInput.value = 'New York'
+    searchValue()
+}
+inItApp()
 
