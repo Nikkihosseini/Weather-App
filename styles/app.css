@@ -61,7 +61,7 @@ button{
 
 
 body{
-    font-family: "Roboto", serif;
+    font-family: "Kumbh Sans", sans-serif;
     font-size: 1rem;
     background-image: linear-gradient(var(--bg-gray-top),var(--bg-gray-bottom));
     display: flex;
@@ -138,13 +138,19 @@ body{
 .weatherApp__temperature--wrapper{
 
 }
+.weatherApp__temperature-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+}
 .weatherApp__temperature{
 
 }
 .weatherApp__description{
 
 }
-.weatherApp__more-details__name{
+.weatherApp__more-details{
 
 }
 .weatherApp__clouds{
