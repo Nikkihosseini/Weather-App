@@ -12,7 +12,7 @@
 :root{
    --bg-gray-top: #d1d1d1;
    --bg-gray-bottom: #efefef;
-   --main-bg: #f7f7f7;
+   --main-bg: rgba(255, 255, 255, 0.2);
    --bg-clouds-top: #eb864c;
    --bg--clouds-bottom: #ab5e36;
    --bg-humidity-top: #a65f7f;
@@ -51,6 +51,12 @@ input{
     outline: none;
 }
 
+button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
 
 
 
@@ -61,6 +67,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     min-height: 100vh;
 }
 
@@ -75,5 +82,96 @@ body{
 /* ? MAin */
 
 
+.main{
+    background-color: var(--main-bg);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
+    border-radius: 2rem;
+    padding: 2rem;
+}
 
+.weatherApp__wrapper{
 
+}
+.form{
+    position: relative;
+}
+#weatherApp__search{
+    width: 100%;
+    height: 2.8rem;
+    border-radius: 5rem;
+    border: 1px solid var(--bg-gray-top);
+    background-color: transparent;
+    padding: 0.5rem;
+}
+.weatherApp__search-btn{
+    position: absolute;
+    right: 1rem;
+    height: 2.8rem;
+    background-color: transparent;
+    color: #686868;
+}
+.weatherApp__details{
+
+}
+.weatherApp__location--wrapper{
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.weatherApp__location{
+    font-size: 1.8rem;
+    color: #525252;
+}
+.weatherApp__flag{
+    width: 3rem;
+    height: 3rem;
+    display: block;
+}
+.weatherApp__img{
+    filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.4));
+
+}
+.weatherApp__temperature--wrapper{
+
+}
+.weatherApp__temperature{
+
+}
+.weatherApp__description{
+
+}
+.weatherApp__more-details__name{
+
+}
+.weatherApp__clouds{
+
+}
+.weatherApp__humidity{
+
+}
+.weatherApp__pressure{
+
+}
+.details__name{
+
+}
+.more-details{
+
+}
+
+.copyright__weapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.copyright{
+    
+}
+.github__link{
+    
+}
