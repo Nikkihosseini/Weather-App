@@ -13,12 +13,14 @@
    --bg-gray-top: #d1d1d1;
    --bg-gray-bottom: #efefef;
    --main-bg: rgba(255, 255, 255, 0.2);
-   --bg-clouds-top: #eb864c;
-   --bg--clouds-bottom: #ab5e36;
-   --bg-humidity-top: #a65f7f;
-   --bg-humidity-bottom: #7e4861;
-   --bg-pressure-top: #435173;
-   --bg-pressure-bottom: #2d3a51;
+   --bg-clouds-top: #ff8f4f;
+   --bg--clouds-bottom: #cf4700;
+   --bg-humidity-top: #eb78ac;
+   --bg-humidity-bottom: #940044;
+   --bg-pressure-top: #6082d4;
+   --bg-pressure-bottom: #002362;
+   --pirmary-text-colore: #352f2f;
+   --secondary-text-colore: #fefefe;
 }
 
 
@@ -45,10 +47,12 @@ html{
 
 a{
     text-decoration: none;
+    color: inherit;
 }
 
 input{
     outline: none;
+    color: inherit;
 }
 
 button{
@@ -69,6 +73,7 @@ body{
     justify-content: center;
     flex-direction: column;
     min-height: 100vh;
+    color: var(--pirmary-text-colore);
 }
 
 
@@ -99,16 +104,17 @@ body{
 }
 #weatherApp__search{
     width: 100%;
-    height: 2.8rem;
+    height: 3.3rem;
     border-radius: 5rem;
     border: 1px solid var(--bg-gray-top);
     background-color: transparent;
-    padding: 0.5rem;
+    padding: 1rem;
+    font-size: 1.5rem;
 }
 .weatherApp__search-btn{
     position: absolute;
     right: 1rem;
-    height: 2.8rem;
+    height: 3.3rem;
     background-color: transparent;
     color: #686868;
 }
@@ -124,7 +130,7 @@ body{
 }
 .weatherApp__location{
     font-size: 1.8rem;
-    color: #525252;
+    color: var(--pirmary-text-colore);
 }
 .weatherApp__flag{
     width: 3rem;
@@ -143,41 +149,80 @@ body{
     align-items: center;
     justify-content: center;
     font-size: 5rem;
+    font-weight: 400;
+    position: relative;
 }
 .weatherApp__temperature{
-
+    
+}
+.weatherApp__temperature::after{
+    content: "";
+    position: absolute;
+    border: 0.4rem solid;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
 }
 .weatherApp__description{
-
+    font-weight: 700;
+    font-size: 1.5rem;
 }
 .weatherApp__more-details{
-
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    color: var(--secondary-text-colore);
+    margin-top: 3rem;
+    font-size: 1.3rem;
 }
 .weatherApp__clouds{
-
+    background-image: linear-gradient(var(--bg-clouds-top), var(--bg--clouds-bottom));
 }
 .weatherApp__humidity{
-
+    background-image: linear-gradient(var(--bg-humidity-top),var(--bg-humidity-bottom));
 }
 .weatherApp__pressure{
-
+    background-image: linear-gradient(var(--bg-pressure-top),var(--bg-pressure-bottom));
 }
-.details__name{
+.weatherApp__clouds,
+.weatherApp__humidity,
+.weatherApp__pressure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+}
 
+.more-details__name{
+    letter-spacing: 1px;
+    font-weight: 500;
 }
 .more-details{
-
+    font-weight: 400;
 }
+
+
+/* 
+
+! Copyright
+
+*/
 
 .copyright__weapper{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
+    font-weight: 700;
 }
 .copyright{
-    
+    font-size: 1.3rem;
 }
 .github__link{
     
 }
+
